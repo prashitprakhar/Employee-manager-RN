@@ -40,7 +40,7 @@ const loginSuccessDispatcher = (dispatch, user) => {
         payload: user
     });
     //Actions.employeeList();
-    Actions.main();
+    //Actions.main();
 };
 
 const loginFailDispatcher = (dispatch) => {
