@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
-import firebase from 'firebase';
-import { View, Text } from 'react-native';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-import { Header } from './components/common';
 import reducers from './reducers';
-import LoginForm from './components/LoginForm';
 import ReduxThunk from 'redux-thunk';
 import RouterComponent from './router';
 
@@ -14,6 +10,7 @@ class App extends Component {
     state = { loggedIn: null };
     componentWillMount() {
         // Initialize Firebase
+        const firebase = require('firebase');
         const config = {
             apiKey: "AIzaSyChtLGKyh4KnB30Jrn13VKjuiE9LZbFkmo",
             authDomain: "manager-a1efe.firebaseapp.com",
